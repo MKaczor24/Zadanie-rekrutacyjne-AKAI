@@ -24,6 +24,7 @@ const convertButton = document.getElementById("convertGrayscale");
 const uploadedImage = document.getElementById("uploadedImage");
 const grayCanvas = document.getElementById("grayscaleImage");
 const ctx = grayCanvas.getContext("2d");
+convertButton.disabled = true;
 
 imageInput.addEventListener("change", function () {
   const file = imageInput.files[0];
@@ -37,6 +38,7 @@ imageInput.addEventListener("change", function () {
         let textString = "Click the button to see the converted image",
           textWidth = ctx.measureText(textString).width;
         ctx.fillText(textString, grayCanvas.width / 2 - textWidth / 2, 100);
+        convertButton.disabled = false;
       };
     };
     reader.readAsDataURL(file);

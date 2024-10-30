@@ -33,6 +33,14 @@ button {
   margin-bottom: 20px;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  background-color: lightskyblue;
+}
+button:disabled:hover {
+  background-color: lightblue;
+}
+
 button:hover {
   background-color: #0056b3;
 }
